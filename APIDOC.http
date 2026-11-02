@@ -4,10 +4,10 @@ POST http://127.0.0.1:8000/accounts/user/register/
 Content-Type: application/json
 
 {
-    "username":"tom",
-    "email":"tom@gmail.com",
-    "password":"tom123",
-    "phone":"9876543211"
+    "username":"zayn",
+    "email":"zayn@gmail.com",
+    "password":"zayn123",
+    "phone":"9876543222"
 
 }
 
@@ -17,9 +17,11 @@ POST http://127.0.0.1:8000/accounts/jwt/token/
 Content-Type: application/json
 
 {
-    "username":"tom",
-    "password":"tom123"
+    "username":"zayn",
+    "password":"zayn123"
 }
+
+
 
 #api call for creating refresh token
 ###
@@ -30,28 +32,32 @@ Content-Type: application/json
     "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5MzcxMzI4NiwiaWF0IjoxNzkzNjI2ODg2LCJqdGkiOiJjYjEwNjQ0NjU5N2Q0YTI4YmRlMjRhMDlmOGJjYWM0YyIsInVzZXJfaWQiOiIxIn0.JcvO_wo_beOfMFvWHk9KUkQ307mqHXdCNLW0amgIFJY"
 }
 
+
+
 #=======================lead endpoinds=====================================================================
 #api call list lead
 ###
 GET http://127.0.0.1:8000/prospects/leads/
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjI4NTQ1LCJpYXQiOjE3OTM2MjgyNDUsImp0aSI6ImNiYmJmMzc5NjZhMDQ0NTA4ODYxYTExY2Q1MzE3YmI1IiwidXNlcl9pZCI6IjEifQ.k9rvL8kujvu4A4yVDu5qQjvkl8zTkIBW_kdsHDv3RhY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjI5MzQwLCJpYXQiOjE3OTM2MjkwNDAsImp0aSI6ImQzMjg0NGRjOGJiMTQ0Y2NiZmI0MWM0YWZmNDFhZWIyIiwidXNlcl9pZCI6IjIifQ.gSYTIZUrt2One-IUGextFnzYidE2tWvZ1H7wty9R-XQ
 
 #api call for adding lead
 ###
 POST http://127.0.0.1:8000/prospects/leads/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjI3MjEzLCJpYXQiOjE3OTM2MjY5MTMsImp0aSI6Ijg5ODU4NzIzNTVjZDRiZWI4MzBkZTQ0YzZlNjgzYThlIiwidXNlcl9pZCI6IjEifQ.Hld_nuFFvUTZVrx-k7qdA0zmM4nR84mDIYsnjkpvNB8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjI5MTM4LCJpYXQiOjE3OTM2Mjg4MzgsImp0aSI6IjBhMDdiNjFlNTFhZDRlM2ZiODc2NmQyNjNjZjdiNzc3IiwidXNlcl9pZCI6IjIifQ.5cc3Z1i5mtSICjAhViSdQD4i0vhlOVD33UdBCGEzOtU
 
 {
-    "name": "Adarsh Suresh",
-    "email": "adarsh@gmail.com",
-    "phone": "9876543215",
-    "company": "NextGen Technologies",
-    "source": "Other",
-    "status": "Lost",
-    "description": "Not interested in proceeding at this time"
+    "name": "Kiran Mohan",
+    "email": "kiran.mohan@gmail.com",
+    "phone": "9876543217",
+    "company": "Digital Wave Technologies",
+    "source": "Social Media",
+    "status": "Contacted",
+    "description": "Contacted through social media and requested more information"
 }
+
+
 
 #api call retrive lead
 ###
@@ -59,12 +65,12 @@ GET http://127.0.0.1:8000/prospects/leads/2/
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjI4MDA1LCJpYXQiOjE3OTM2Mjc3MDUsImp0aSI6ImNhMjRjY2YzMjA2NDQ2OTA4NjkxMzVjNGUzNDUwY2U3IiwidXNlcl9pZCI6IjEifQ._nZo2gh-LM4pr3bwilh4VNGEiYjNwKOjJXcPxhHoM98
 
+
 #api call for update lead
 ###
 PUT http://127.0.0.1:8000/prospects/leads/2/
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjI4MDA1LCJpYXQiOjE3OTM2Mjc3MDUsImp0aSI6ImNhMjRjY2YzMjA2NDQ2OTA4NjkxMzVjNGUzNDUwY2U3IiwidXNlcl9pZCI6IjEifQ._nZo2gh-LM4pr3bwilh4VNGEiYjNwKOjJXcPxhHoM98
-
 
 {
     "name": "Adarsh Suresh",
